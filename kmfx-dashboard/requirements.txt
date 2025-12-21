@@ -1,0 +1,6 @@
+streamlit
+pandas
+plotly
+cryptography
+reportlab
+streamlit-option-menu
