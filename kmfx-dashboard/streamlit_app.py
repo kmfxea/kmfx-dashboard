@@ -277,7 +277,7 @@ with col3:
 
 # Sidebar Menu (Fixed: Added Announcements to Owner menu too)
 with st.sidebar:
-    st.image("kmfx_logo.png", width=200)  # Your logo
+    st.image("kmfx-dashboard/kmfx_logo.png", width=200)
     st.markdown("<h2 style='color: #ffd700; text-align: center;'>Menu</h2>", unsafe_allow_html=True)
     
     if st.session_state.is_owner:
@@ -797,3 +797,4 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.caption("© 2025 KMFX EA Dashboard • Fixed & Functional 🚀")
+
