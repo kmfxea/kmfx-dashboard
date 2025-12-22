@@ -1,6 +1,7 @@
 streamlit
 pandas
 plotly
-cryptography
 reportlab
+bcrypt
+cryptography
 streamlit-option-menu
