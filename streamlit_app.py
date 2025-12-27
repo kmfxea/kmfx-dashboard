@@ -8,7 +8,21 @@ import datetime
 import bcrypt
 import os
 import plotly.express as px
+# ------------------------- KEEP-ALIVE FOR STREAMLIT CLOUD -------------------------
+def keep_alive():
+    while True:
+        try:
+            requests.get("https://kmfx-dashboard.streamlit.app", timeout=10)  # Palitan mo 'to ng actual URL mo
+        except:
+            pass
+        time.sleep(1500)  # Every 25 minutes (1500 seconds)
 
+# Only run in production (Streamlit Cloud)
+if os.getenv("STREAMLIT_SHARING", False) or st.secrets.get("KEEP_ALIVE", False):
+    if not hasattr(st, "_keep_alive_thread_started"):
+        thread = threading.Thread(target=keep_alive, daemon=True)
+        thread.start()
+        st._keep_alive_thread_started = True
 # ------------------------- PAGE CONFIG -------------------------
 st.set_page_config(
     page_title="KMFX Dashboard",
