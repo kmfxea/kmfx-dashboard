@@ -12,7 +12,7 @@ import plotly.express as px
 def keep_alive():
     while True:
         try:
-            requests.get("https://kmfx-dashboard.streamlit.app", timeout=10)  # Palitan mo 'to ng actual URL mo
+            requests.get("https://hc-ping.com/7537810d-5814-451b-8814-5fccd2f67281)  # Palitan mo 'to ng actual URL mo
         except:
             pass
         time.sleep(1500)  # Every 25 minutes (1500 seconds)
@@ -2895,4 +2895,5 @@ elif selected == "My Profile":
 
 # Footer
 st.markdown("---")
+
 st.caption("KMFX EA • Built by Faith ,Shared for Generation • Make him Proud")
